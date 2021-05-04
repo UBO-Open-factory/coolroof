@@ -1,6 +1,5 @@
 #
 #           Programe modifier et annoter par Arthur
-# voire le fichier note pour plus d'information
 #
 import pycom
 import time
@@ -79,7 +78,7 @@ while True:
         #print(gc.mem_free())
         dataReceived=uart.read()
         pycom.rgbled(0x808000) #faible alumage de la led en blanc
-        time.sleep(0.05)
+        time.sleep(0.5)# en s
 
         while dataReceived == None :
             #print("pas de donnees")
@@ -93,14 +92,14 @@ while True:
 # dataReceived[0]+dataReceived[1] + checksum (1 o) car la longueur est
 # datareceived[1]*2^8+dataReceived[2]=0x0012 apres on la traduit on decimal
         longueur=dataReceived[1]*256+dataReceived[2]+4
-
+        print('longueur_trame_reçu (en octets) :', longueur)
 # si la taille de la trame n'est pas égale a la longeur
         if len(dataReceived)!=longueur:
 # afficher le code erreur hssl
-            print('hssl', longeur)
+            print('hssl_1 : ', longueur)
+            print('len_dataReceived',len(dataReceived))
             #longueur2=dataReceived[2]+4
-            #print(longueur)
-            #print(longueur2)
+            #print('hssl_2 : ',longueur2)
         else:
             trame=longueur*[0]#On construit la trame qu'on va traiter elle a la longueur de la trame qu'on a recu en uart
             gc.collect()
@@ -138,10 +137,10 @@ while True:
                     else:
                         data_raw=trame[19:21]
                         data_raw2=trame[21:23]
-                        #print()
-                        #print('data_raw  :',data_raw)
-                        #print('data_raw2 :',data_raw2)
-                        #print()
+                        print('data_raw  :',data_raw)
+                        print('data_raw2 :',data_raw2)
+                        print('######################################################')
+                        print()
                         mesure1=int(data_raw[0])*256|int(data_raw[1])
                         mesure2=int(data_raw2[0])*256|int(data_raw2[1])
                         tension1 = (mesure1 * 1200) / 1023
@@ -241,6 +240,7 @@ while True:
     print("#### tableau envoyée ####")
     print('tableau LORA:',T)
     print("#########################")
+    print()
     s.send(T)
     pycom.rgbled(0x004000)
     time.sleep(0.1)
