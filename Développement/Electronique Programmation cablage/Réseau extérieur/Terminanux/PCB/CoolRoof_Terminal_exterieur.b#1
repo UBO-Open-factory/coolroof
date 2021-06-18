@@ -684,7 +684,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="55.27" y="9.62" size="1.27" layer="21" rot="R90"/>
 </element>
 <element name="U200" library="Eagle_UOF_Lib" package="MICROUSB-LIPO-CHARGEUR-ADAFRUIT" value="" x="40" y="38" smashed="yes" rot="R270">
-<attribute name="NAME" x="61.844" y="37.492" size="1.27" layer="21" rot="R270"/>
+<attribute name="NAME" x="48.344" y="35.492" size="1.27" layer="21" rot="R270"/>
 <attribute name="VALUE" x="59.812" y="37.492" size="1.27" layer="21" rot="R270"/>
 </element>
 </elements>
