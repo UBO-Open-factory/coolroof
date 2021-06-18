@@ -837,8 +837,8 @@ CC-BY-SA</text>
 <instance part="GND3" gate="1" x="152.4" y="68.58" smashed="yes">
 <attribute name="VALUE" x="149.86" y="66.04" size="1.778" layer="96"/>
 </instance>
-<instance part="GND6" gate="1" x="55.88" y="78.74" smashed="yes">
-<attribute name="VALUE" x="53.34" y="76.2" size="1.778" layer="96"/>
+<instance part="GND6" gate="1" x="91.44" y="76.2" smashed="yes">
+<attribute name="VALUE" x="88.9" y="73.66" size="1.778" layer="96"/>
 </instance>
 <instance part="U100" gate="G$1" x="124.46" y="160.02" smashed="yes">
 <attribute name="NAME" x="111.76" y="189.23" size="1.778" layer="95"/>
@@ -862,11 +862,11 @@ CC-BY-SA</text>
 </instance>
 <instance part="U201" gate="G$1" x="111.76" y="88.9" smashed="yes">
 <attribute name="NAME" x="104.14" y="96.52" size="1.778" layer="95"/>
-<attribute name="VALUE" x="91.44" y="101.6" size="1.27" layer="96"/>
+<attribute name="VALUE" x="99.06" y="101.6" size="1.27" layer="96"/>
 </instance>
-<instance part="U200" gate="G$1" x="45.72" y="78.74" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="76.2" y="93.98" size="1.27" layer="97" rot="MR0"/>
-<attribute name="NAME" x="73.66" y="93.98" size="1.778" layer="95" rot="MR0"/>
+<instance part="U200" gate="G$1" x="101.6" y="78.74" smashed="yes">
+<attribute name="VALUE" x="71.12" y="93.98" size="1.27" layer="97"/>
+<attribute name="NAME" x="71.12" y="96.52" size="1.778" layer="95"/>
 </instance>
 <instance part="GND2" gate="1" x="104.14" y="129.54" smashed="yes">
 <attribute name="VALUE" x="101.6" y="127" size="1.778" layer="96"/>
@@ -877,8 +877,8 @@ CC-BY-SA</text>
 <instance part="GND5" gate="1" x="88.9" y="137.16" smashed="yes">
 <attribute name="VALUE" x="86.36" y="134.62" size="1.778" layer="96"/>
 </instance>
-<instance part="GND7" gate="1" x="78.74" y="78.74" smashed="yes">
-<attribute name="VALUE" x="78.74" y="76.2" size="1.778" layer="96"/>
+<instance part="GND7" gate="1" x="68.58" y="76.2" smashed="yes">
+<attribute name="VALUE" x="66.04" y="73.66" size="1.778" layer="96"/>
 </instance>
 <instance part="GND8" gate="1" x="111.76" y="76.2" smashed="yes">
 <attribute name="VALUE" x="109.22" y="73.66" size="1.778" layer="96"/>
@@ -894,10 +894,17 @@ CC-BY-SA</text>
 <busses>
 </busses>
 <nets>
+<net name="N$3" class="0">
+<segment>
+<wire x1="91.44" y1="88.9" x2="101.6" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="U200" gate="G$1" pin="5V"/>
+<pinref part="U201" gate="G$1" pin="COM"/>
+</segment>
+</net>
 <net name="GND" class="0">
 <segment>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="55.88" y1="83.82" x2="55.88" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="83.82" x2="91.44" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="U200" gate="G$1" pin="GND@RIGHT"/>
 </segment>
 <segment>
@@ -918,7 +925,7 @@ CC-BY-SA</text>
 <segment>
 <pinref part="U200" gate="G$1" pin="GND@LEFT"/>
 <pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="78.74" y1="83.82" x2="78.74" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="83.82" x2="68.58" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U201" gate="G$1" pin="GNDA"/>
@@ -1004,13 +1011,6 @@ CC-BY-SA</text>
 <pinref part="U100" gate="G$1" pin="!RESET"/>
 <wire x1="109.22" y1="182.88" x2="101.6" y2="182.88" width="0.1524" layer="91"/>
 <label x="101.6" y="182.88" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="U201" gate="G$1" pin="COM"/>
-<pinref part="U200" gate="G$1" pin="VBAT"/>
-<wire x1="78.74" y1="88.9" x2="101.6" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

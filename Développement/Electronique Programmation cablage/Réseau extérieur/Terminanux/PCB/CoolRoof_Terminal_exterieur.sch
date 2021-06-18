@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.4.0">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -369,10 +369,10 @@
 <text x="6.35" y="18.288" size="1.016" layer="21" ratio="12" align="center">5V</text>
 <text x="10.16" y="18.288" size="1.016" layer="21" ratio="12" align="center">GND</text>
 <text x="14.097" y="18.288" size="1.016" layer="21" ratio="12" align="center">BAT</text>
-<pad name="5V" x="6.35" y="16.51" drill="0.8128" diameter="1.6256" rot="R90"/>
-<pad name="GND1" x="8.89" y="16.51" drill="0.8128" diameter="1.6256" rot="R90"/>
-<pad name="GND2" x="11.43" y="16.51" drill="0.8128" diameter="1.6256" rot="R90"/>
-<pad name="BAT" x="13.97" y="16.51" drill="0.8128" diameter="1.6256" rot="R90"/>
+<pad name="5V" x="6.35" y="16.51" drill="1" diameter="1.6256" shape="long" rot="R90"/>
+<pad name="GND1" x="8.89" y="16.51" drill="1" diameter="1.6256" shape="long" rot="R90"/>
+<pad name="GND2" x="11.43" y="16.51" drill="1" diameter="1.6256" shape="long" rot="R90"/>
+<pad name="BAT" x="13.97" y="16.51" drill="1" diameter="1.6256" shape="long" rot="R90"/>
 <text x="0.508" y="19.812" size="1.27" layer="21">&gt;VALUE</text>
 <text x="0.508" y="21.844" size="1.27" layer="21">&gt;NAME</text>
 <wire x1="0" y1="16.51" x2="2.54" y2="19.05" width="0.127" layer="21" curve="-90"/>
@@ -889,7 +889,11 @@ CC-BY-SA</text>
 <instance part="GND10" gate="1" x="88.9" y="116.84" smashed="yes">
 <attribute name="VALUE" x="86.36" y="114.3" size="1.778" layer="96"/>
 </instance>
-<instance part="FRAME1" gate="G$1" x="-7.62" y="30.48"/>
+<instance part="FRAME1" gate="G$1" x="-7.62" y="30.48" smashed="yes">
+<attribute name="DRAWING_NAME" x="209.55" y="45.72" size="2.54" layer="94"/>
+<attribute name="LAST_DATE_TIME" x="209.55" y="40.64" size="2.286" layer="94"/>
+<attribute name="SHEET" x="222.885" y="35.56" size="2.54" layer="94"/>
+</instance>
 </instances>
 <busses>
 </busses>
